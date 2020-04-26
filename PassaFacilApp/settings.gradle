@@ -1,0 +1,2 @@
+rootProject.name='PassaFacilProject'
+include ':app'
