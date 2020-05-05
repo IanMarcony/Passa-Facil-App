@@ -14,11 +14,11 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:layout_width="797dp"
-            android:layout_height="wrap_content"
+            android:layout_width="407dp"
+            android:layout_height="200dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="100dp"
-            android:src="@drawable/ic_logo_foreground" />
+            android:src="@mipmap/ic_logoExtra_foreground" />
 
        <LinearLayout
            android:layout_width="wrap_content"
@@ -66,7 +66,7 @@
                    android:fontFamily="sans-serif-smallcaps"
                    android:gravity="center"
                    android:layout_marginRight="10dp"
-                   android:text="Senha:"
+                   android:text="Senha"
                    android:textColor="#000"
                    android:textSize="17dp" />
 
