@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelaCadastro">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="Voltar"
+            android:layout_margin="10dp"
+            android:background="#FFFFFF"
+            android:textColor="#4c86b5"
+            android:fontFamily="sans-serif-smallcaps" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="170dp">
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Nome"
+                android:layout_marginLeft="20dp"
+                android:textSize="17dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textColor="#000"/>
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:textSize="15dp"
+                android:fontFamily="sans-serif-smallcaps"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Nascimento"
+                android:layout_marginLeft="20dp"
+                android:textSize="17dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textColor="#000"/>
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:textSize="15dp"
+                android:fontFamily="sans-serif-smallcaps"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Nº Passa-Fácil"
+                android:layout_marginLeft="20dp"
+                android:textSize="17dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textColor="#000"/>
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:textSize="15dp"
+                android:fontFamily="sans-serif-smallcaps"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Sexo"
+                android:layout_marginLeft="20dp"
+                android:textSize="17dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textColor="#000"/>
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:textSize="15dp"
+                android:fontFamily="sans-serif-smallcaps"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="CPF"
+                android:layout_marginLeft="20dp"
+                android:textSize="17dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textColor="#000"/>
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:textSize="15dp"
+                android:fontFamily="sans-serif-smallcaps"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="RG"
+                android:layout_marginLeft="20dp"
+                android:textSize="17dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textColor="#000"/>
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:textSize="15dp"
+                android:fontFamily="sans-serif-smallcaps"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Endereço"
+                android:layout_marginLeft="20dp"
+                android:textSize="17dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textColor="#000"/>
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:textSize="15dp"
+                android:fontFamily="sans-serif-smallcaps"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="E-mail"
+                android:layout_marginLeft="20dp"
+                android:textSize="17dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textColor="#000"/>
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:textSize="15dp"
+                android:fontFamily="sans-serif-smallcaps"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="Concluir"
+            android:layout_marginTop="60dp"
+            android:gravity="center"
+            android:layout_marginLeft="180dp"
+            android:textColor="#f47d1f"
+            android:background="#FFFF"
+            android:fontFamily="sans-serif-smallcaps"/>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
