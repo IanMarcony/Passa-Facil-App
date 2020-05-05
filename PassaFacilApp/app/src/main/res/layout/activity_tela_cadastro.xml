@@ -5,21 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TelaCadastro">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:ignore="MissingConstraints">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="25dp"
-            android:text="Voltar"
-            android:layout_margin="10dp"
-            android:background="#FFFFFF"
-            android:textColor="#4c86b5"
-            android:fontFamily="sans-serif-smallcaps" />
+
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -40,8 +32,10 @@
             <EditText
                 android:layout_width="250dp"
                 android:layout_height="40dp"
-                android:textSize="15dp"
-                android:fontFamily="sans-serif-smallcaps"/>
+                android:background="@drawable/style_edit_text"
+                android:fontFamily="sans-serif-smallcaps"
+                android:padding="10dp"
+                android:textSize="15dp" />
 
         </LinearLayout>
 
@@ -63,8 +57,10 @@
             <EditText
                 android:layout_width="250dp"
                 android:layout_height="40dp"
-                android:textSize="15dp"
-                android:fontFamily="sans-serif-smallcaps"/>
+                android:background="@drawable/style_edit_text"
+                android:fontFamily="sans-serif-smallcaps"
+                android:padding="10dp"
+                android:textSize="15dp" />
 
         </LinearLayout>
 
@@ -86,8 +82,10 @@
             <EditText
                 android:layout_width="250dp"
                 android:layout_height="40dp"
-                android:textSize="15dp"
-                android:fontFamily="sans-serif-smallcaps"/>
+                android:background="@drawable/style_edit_text"
+                android:fontFamily="sans-serif-smallcaps"
+                android:padding="10dp"
+                android:textSize="15dp" />
 
         </LinearLayout>
 
@@ -109,8 +107,10 @@
             <EditText
                 android:layout_width="250dp"
                 android:layout_height="40dp"
-                android:textSize="15dp"
-                android:fontFamily="sans-serif-smallcaps"/>
+                android:background="@drawable/style_edit_text"
+                android:fontFamily="sans-serif-smallcaps"
+                android:padding="10dp"
+                android:textSize="15dp" />
 
         </LinearLayout>
 
@@ -132,8 +132,10 @@
             <EditText
                 android:layout_width="250dp"
                 android:layout_height="40dp"
-                android:textSize="15dp"
-                android:fontFamily="sans-serif-smallcaps"/>
+                android:background="@drawable/style_edit_text"
+                android:fontFamily="sans-serif-smallcaps"
+                android:padding="10dp"
+                android:textSize="15dp" />
 
         </LinearLayout>
 
@@ -155,8 +157,10 @@
             <EditText
                 android:layout_width="250dp"
                 android:layout_height="40dp"
-                android:textSize="15dp"
-                android:fontFamily="sans-serif-smallcaps"/>
+                android:background="@drawable/style_edit_text"
+                android:fontFamily="sans-serif-smallcaps"
+                android:padding="10dp"
+                android:textSize="15dp" />
 
         </LinearLayout>
 
@@ -178,8 +182,10 @@
             <EditText
                 android:layout_width="250dp"
                 android:layout_height="40dp"
-                android:textSize="15dp"
-                android:fontFamily="sans-serif-smallcaps"/>
+                android:background="@drawable/style_edit_text"
+                android:fontFamily="sans-serif-smallcaps"
+                android:padding="10dp"
+                android:textSize="15dp" />
 
         </LinearLayout>
 
@@ -201,8 +207,10 @@
             <EditText
                 android:layout_width="250dp"
                 android:layout_height="40dp"
-                android:textSize="15dp"
-                android:fontFamily="sans-serif-smallcaps"/>
+                android:background="@drawable/style_edit_text"
+                android:fontFamily="sans-serif-smallcaps"
+                android:padding="10dp"
+                android:textSize="15dp" />
 
         </LinearLayout>
 
@@ -213,8 +221,8 @@
             android:layout_marginTop="60dp"
             android:gravity="center"
             android:layout_marginLeft="180dp"
-            android:textColor="#f47d1f"
-            android:background="#FFFF"
+            android:textColor="#323131"
+            android:background="#f47d1f"
             android:fontFamily="sans-serif-smallcaps"/>
 
 
