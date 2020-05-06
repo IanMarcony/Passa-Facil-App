@@ -1,8 +1,10 @@
-package com.marcony.passafacilproject;
+package com.marcony.passafacilproject.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.marcony.passafacilproject.R;
 
 public class TelaPrincipal extends AppCompatActivity {
 

@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TelaCompraCreditos">
+    tools:context=".views.TelaCompraCreditos">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:ignore="MissingConstraints">
 
@@ -16,33 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="170dp"
-            android:layout_marginBottom="9dp">
-
-            <TextView
-                android:layout_width="125dp"
-                android:layout_height="40dp"
-                android:gravity="center"
-                android:text="Nº de Passes"
-                android:layout_marginLeft="20dp"
-                android:textSize="17dp"
-                android:fontFamily="sans-serif-smallcaps"
-                android:textColor="#000"/>
-
-            <EditText
-                android:layout_width="250dp"
-                android:layout_height="40dp"
-                android:background="@drawable/style_edit_text"
-                android:fontFamily="sans-serif-smallcaps"
-                android:padding="10dp"
-                android:textSize="15dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginTop="150dp"
             android:layout_marginBottom="9dp">
 
             <TextView
@@ -56,6 +30,7 @@
                 android:textColor="#000"/>
 
             <EditText
+                android:id="@+id/buy_edit_value"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
                 android:background="@drawable/style_edit_text"
@@ -82,6 +57,7 @@
                 android:textColor="#000"/>
 
             <EditText
+                android:id="@+id/buy_edit_numcard"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
                 android:background="@drawable/style_edit_text"
@@ -107,6 +83,7 @@
                 android:textColor="#000"/>
 
             <EditText
+                android:id="@+id/buy_edit_impr_card"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
@@ -133,6 +110,7 @@
                 android:textColor="#000"/>
 
             <EditText
+                android:id="@+id/buy_edit_cvv"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
                 android:background="@drawable/style_edit_text"
@@ -171,6 +149,7 @@
                     android:textColor="#000"/>
 
                 <EditText
+                    android:id="@+id/buy_edit_val_mes"
                     android:layout_width="60dp"
                     android:layout_height="40dp"
                     android:background="@drawable/style_edit_text"
@@ -194,6 +173,7 @@
                     android:textColor="#000"/>
 
                 <EditText
+                    android:id="@+id/buy_edit_val_ano"
                     android:layout_width="60dp"
                     android:layout_height="40dp"
                     android:background="@drawable/style_edit_text"
@@ -207,6 +187,7 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/buy_btn_trans"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:text="Efetuar Transação"
@@ -218,5 +199,45 @@
             android:fontFamily="sans-serif-smallcaps"/>
 
     </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/buy_progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="100dp"
+        android:layout_height="101dp"
+        android:progressTint="#0D47A1"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/guideline24"
+        app:layout_constraintEnd_toStartOf="@+id/guideline26"
+        app:layout_constraintStart_toStartOf="@+id/guideline25"
+        app:layout_constraintTop_toTopOf="@+id/guideline23" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="521dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="695dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="105dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="297dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

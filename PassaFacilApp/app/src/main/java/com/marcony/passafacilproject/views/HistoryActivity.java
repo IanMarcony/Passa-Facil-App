@@ -1,4 +1,4 @@
-package com.marcony.passafacilproject;
+package com.marcony.passafacilproject.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.marcony.passafacilproject.R;
 import com.marcony.passafacilproject.adapter.MyRecycleViewAdapter;
 import com.marcony.passafacilproject.models.Bus;
 

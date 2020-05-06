@@ -1,4 +1,4 @@
-package com.marcony.passafacilproject;
+package com.marcony.passafacilproject.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import com.marcony.passafacilproject.R;
 
 public class MainActivity extends AppCompatActivity {
 
