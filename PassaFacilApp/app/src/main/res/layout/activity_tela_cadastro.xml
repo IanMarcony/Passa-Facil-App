@@ -5,31 +5,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TelaCadastro">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="151dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="720dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:ignore="MissingConstraints">
 
 
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="170dp">
+            android:layout_marginTop="170dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="125dp"
                 android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="sans-serif-smallcaps"
                 android:gravity="center"
                 android:text="Nome"
-                android:layout_marginLeft="20dp"
-                android:textSize="17dp"
-                android:fontFamily="sans-serif-smallcaps"
-                android:textColor="#000"/>
+                android:textColor="#000"
+                android:textSize="17dp" />
 
             <EditText
+                android:id="@+id/register_name"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
                 android:background="@drawable/style_edit_text"
@@ -47,14 +62,15 @@
             <TextView
                 android:layout_width="125dp"
                 android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="sans-serif-smallcaps"
                 android:gravity="center"
                 android:text="Nascimento"
-                android:layout_marginLeft="20dp"
-                android:textSize="17dp"
-                android:fontFamily="sans-serif-smallcaps"
-                android:textColor="#000"/>
+                android:textColor="#000"
+                android:textSize="17dp" />
 
             <EditText
+                android:id="@+id/register_birthdate"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
                 android:background="@drawable/style_edit_text"
@@ -72,14 +88,15 @@
             <TextView
                 android:layout_width="125dp"
                 android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="sans-serif-smallcaps"
                 android:gravity="center"
                 android:text="Nº Passa-Fácil"
-                android:layout_marginLeft="20dp"
-                android:textSize="17dp"
-                android:fontFamily="sans-serif-smallcaps"
-                android:textColor="#000"/>
+                android:textColor="#000"
+                android:textSize="17dp" />
 
             <EditText
+                android:id="@+id/register_numpass"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
                 android:background="@drawable/style_edit_text"
@@ -97,14 +114,15 @@
             <TextView
                 android:layout_width="125dp"
                 android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="sans-serif-smallcaps"
                 android:gravity="center"
                 android:text="Sexo"
-                android:layout_marginLeft="20dp"
-                android:textSize="17dp"
-                android:fontFamily="sans-serif-smallcaps"
-                android:textColor="#000"/>
+                android:textColor="#000"
+                android:textSize="17dp" />
 
             <EditText
+                android:id="@+id/register_sexo"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
                 android:background="@drawable/style_edit_text"
@@ -122,14 +140,15 @@
             <TextView
                 android:layout_width="125dp"
                 android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="sans-serif-smallcaps"
                 android:gravity="center"
                 android:text="CPF"
-                android:layout_marginLeft="20dp"
-                android:textSize="17dp"
-                android:fontFamily="sans-serif-smallcaps"
-                android:textColor="#000"/>
+                android:textColor="#000"
+                android:textSize="17dp" />
 
             <EditText
+                android:id="@+id/register_cpf"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
                 android:background="@drawable/style_edit_text"
@@ -147,14 +166,15 @@
             <TextView
                 android:layout_width="125dp"
                 android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="sans-serif-smallcaps"
                 android:gravity="center"
                 android:text="RG"
-                android:layout_marginLeft="20dp"
-                android:textSize="17dp"
-                android:fontFamily="sans-serif-smallcaps"
-                android:textColor="#000"/>
+                android:textColor="#000"
+                android:textSize="17dp" />
 
             <EditText
+                android:id="@+id/register_rg"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
                 android:background="@drawable/style_edit_text"
@@ -172,14 +192,15 @@
             <TextView
                 android:layout_width="125dp"
                 android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="sans-serif-smallcaps"
                 android:gravity="center"
                 android:text="Endereço"
-                android:layout_marginLeft="20dp"
-                android:textSize="17dp"
-                android:fontFamily="sans-serif-smallcaps"
-                android:textColor="#000"/>
+                android:textColor="#000"
+                android:textSize="17dp" />
 
             <EditText
+                android:id="@+id/register_adress"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
                 android:background="@drawable/style_edit_text"
@@ -197,14 +218,41 @@
             <TextView
                 android:layout_width="125dp"
                 android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="sans-serif-smallcaps"
                 android:gravity="center"
                 android:text="E-mail"
-                android:layout_marginLeft="20dp"
-                android:textSize="17dp"
-                android:fontFamily="sans-serif-smallcaps"
-                android:textColor="#000"/>
+                android:textColor="#000"
+                android:textSize="17dp" />
 
             <EditText
+                android:id="@+id/register_email"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:background="@drawable/style_edit_text"
+                android:fontFamily="sans-serif-smallcaps"
+                android:padding="10dp"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="Senha"
+                android:textColor="#000"
+                android:textSize="17dp" />
+
+            <EditText
+                android:id="@+id/register_password"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
                 android:background="@drawable/style_edit_text"
@@ -215,17 +263,46 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/register_btn_concludes"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
-            android:text="Concluir"
-            android:layout_marginTop="60dp"
-            android:gravity="center"
             android:layout_marginLeft="180dp"
-            android:textColor="#323131"
+            android:layout_marginTop="60dp"
             android:background="#f47d1f"
-            android:fontFamily="sans-serif-smallcaps"/>
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"
+            android:text="Concluir"
+            android:textColor="#323131" />
 
 
     </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/register_progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="97dp"
+        android:layout_height="68dp"
+        android:progressTint="#0D47A1"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/guideline20"
+        app:layout_constraintEnd_toStartOf="@+id/guideline22"
+        app:layout_constraintHorizontal_bias="0.520"
+        app:layout_constraintStart_toStartOf="@+id/guideline21"
+        app:layout_constraintTop_toTopOf="@+id/guideline19"
+        app:layout_constraintVertical_bias="0.39" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="632dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="291dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

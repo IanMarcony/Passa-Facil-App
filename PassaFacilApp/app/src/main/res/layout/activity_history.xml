@@ -102,6 +102,7 @@
         app:layout_constraintGuide_begin="385dp" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/activity_history_list_recycle"
         android:layout_width="311dp"
         android:layout_height="593dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline14"

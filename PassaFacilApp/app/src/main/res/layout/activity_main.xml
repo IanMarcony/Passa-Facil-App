@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="#FFFFFF"
         tools:ignore="MissingConstraints">
@@ -84,32 +84,70 @@
        </LinearLayout>
 
 
-
         <Button
+            android:id="@+id/main_btn_enter"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
-            android:text="Entrar"
             android:layout_gravity="center_horizontal"
-            android:background="#FFFFFF"
             android:layout_marginTop="30dp"
-            android:textColor="#4c86b5"
+            android:background="#FFFFFF"
             android:fontFamily="sans-serif-smallcaps"
-            />
+            android:text="Entrar"
+            android:textColor="#4c86b5" />
 
         <Button
+            android:id="@+id/main_btn_register"
             android:layout_width="110dp"
             android:layout_height="25dp"
-            android:layout_marginTop="40dp"
-            android:text="Cadastrar"
             android:layout_gravity="center_horizontal"
-            android:textColor="#323131"
+            android:layout_marginTop="40dp"
             android:background="#f47d1f"
             android:fontFamily="sans-serif-smallcaps"
-            />
+            android:text="Cadastrar"
+            android:textColor="#323131" />
 
     </LinearLayout>
 
+    <ProgressBar
+        android:id="@+id/main_progress"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="119dp"
+        android:layout_height="99dp"
+        android:background="#000D47A1"
+        android:progressTint="#0D47A1"
+        app:layout_constraintBottom_toTopOf="@+id/guideline15"
+        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintStart_toStartOf="@+id/guideline17"
+        app:layout_constraintTop_toTopOf="@+id/guideline16" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="657dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="512dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="116dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="300dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
