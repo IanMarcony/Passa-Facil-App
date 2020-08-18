@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.587" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textSaldo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textNViagens"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
@@ -112,57 +112,51 @@
         app:layout_constraintVertical_bias="0.268">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btn_buy_main"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:background="@drawable/botao_customizado"
-            android:text="Principal"
-            android:textSize="10dp" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
+            android:onClick="navigateToScreen"
             android:background="@drawable/botao_customizado"
             android:text="Recarregar"
             android:textSize="10dp" />
-
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btn_map_main"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
+            android:onClick="navigateToScreen"
+            android:background="@drawable/botao_customizado"
+            android:text="Mapa"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/btn_historic_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:onClick="navigateToScreen"
             android:background="@drawable/botao_customizado"
             android:text="histórico"
             android:textSize="10dp" />
 
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/botao_customizado"
-            android:text="Recadastrar"
-            android:textSize="10dp" />
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="60dp"
+        android:onClick="navigateToScreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_social" />
+        android:src="@drawable/ic_baseline_exit_to_app_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

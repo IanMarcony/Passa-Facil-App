@@ -2,6 +2,8 @@ package com.marcony.passafacilproject.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,10 +12,12 @@ import android.widget.ProgressBar;
 
 import com.marcony.passafacilproject.R;
 
-public class TelaCompraCreditos extends AppCompatActivity {
+import java.util.Timer;
+
+public class TelaCompraCreditos extends Activity {
 
     EditText value, numCard, numImprCard, numCvv, valMes,valAno;
-    Button btnTrans;
+    Button btnTrans,btn_map;
     ProgressBar progressBar;
 
     @Override
@@ -33,6 +37,13 @@ public class TelaCompraCreditos extends AppCompatActivity {
                 
             }
         });
+        btn_map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),MapActivity.class));
+
+            }
+        });
     }
 
 
@@ -45,6 +56,7 @@ public class TelaCompraCreditos extends AppCompatActivity {
         valMes = findViewById(R.id.buy_edit_val_mes);
         valAno = findViewById(R.id.buy_edit_val_ano);
         btnTrans = findViewById(R.id.buy_btn_trans);
+        btn_map= findViewById(R.id.buy_btn_maps);
         progressBar =  findViewById(R.id.buy_progressBar);
 
     }

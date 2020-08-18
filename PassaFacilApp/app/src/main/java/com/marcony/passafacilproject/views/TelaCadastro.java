@@ -2,6 +2,7 @@ package com.marcony.passafacilproject.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +12,7 @@ import android.widget.Toast;
 
 import com.marcony.passafacilproject.R;
 
-public class TelaCadastro extends AppCompatActivity {
+public class TelaCadastro extends Activity {
 
     EditText name , birthDate,numPass,sexo,cpf,rg,adress, email,password;
     ProgressBar progressBar;

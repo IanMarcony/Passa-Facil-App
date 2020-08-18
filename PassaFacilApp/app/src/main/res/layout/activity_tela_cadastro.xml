@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     tools:context=".views.TelaCadastro">
 
     <androidx.constraintlayout.widget.Guideline
@@ -30,7 +31,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="170dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
             <TextView
@@ -57,6 +59,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
             <TextView
@@ -76,6 +79,7 @@
                 android:background="@drawable/style_edit_text"
                 android:fontFamily="sans-serif-smallcaps"
                 android:padding="10dp"
+                android:inputType="date"
                 android:textSize="15dp" />
 
         </LinearLayout>
@@ -83,6 +87,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
             <TextView
@@ -102,6 +107,7 @@
                 android:background="@drawable/style_edit_text"
                 android:fontFamily="sans-serif-smallcaps"
                 android:padding="10dp"
+                android:inputType="number"
                 android:textSize="15dp" />
 
         </LinearLayout>
@@ -109,6 +115,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
             <TextView
@@ -128,6 +135,7 @@
                 android:background="@drawable/style_edit_text"
                 android:fontFamily="sans-serif-smallcaps"
                 android:padding="10dp"
+                android:imeOptions="actionNext"
                 android:textSize="15dp" />
 
         </LinearLayout>
@@ -135,6 +143,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
             <TextView
@@ -154,6 +163,7 @@
                 android:background="@drawable/style_edit_text"
                 android:fontFamily="sans-serif-smallcaps"
                 android:padding="10dp"
+                android:inputType="number"
                 android:textSize="15dp" />
 
         </LinearLayout>
@@ -161,6 +171,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
             <TextView
@@ -179,6 +190,7 @@
                 android:layout_height="40dp"
                 android:background="@drawable/style_edit_text"
                 android:fontFamily="sans-serif-smallcaps"
+                android:inputType="number"
                 android:padding="10dp"
                 android:textSize="15dp" />
 
@@ -187,6 +199,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
             <TextView
@@ -204,7 +217,8 @@
                 android:layout_width="250dp"
                 android:layout_height="40dp"
                 android:background="@drawable/style_edit_text"
-                android:fontFamily="sans-serif-smallcaps"
+                android:fontFamily="sans-serif"
+                android:imeOptions="actionNext"
                 android:padding="10dp"
                 android:textSize="15dp" />
 
@@ -213,6 +227,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
             <TextView
@@ -232,6 +247,8 @@
                 android:background="@drawable/style_edit_text"
                 android:fontFamily="sans-serif-smallcaps"
                 android:padding="10dp"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
                 android:textSize="15dp" />
 
         </LinearLayout>
@@ -256,7 +273,8 @@
                 android:layout_width="250dp"
                 android:layout_height="40dp"
                 android:background="@drawable/style_edit_text"
-                android:fontFamily="sans-serif-smallcaps"
+                android:fontFamily="sans-serif"
+                android:inputType="textPassword"
                 android:padding="10dp"
                 android:textSize="15dp" />
 
@@ -264,9 +282,9 @@
 
         <Button
             android:id="@+id/register_btn_concludes"
-            android:layout_width="wrap_content"
-            android:layout_height="25dp"
-            android:layout_marginLeft="180dp"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="140dp"
             android:layout_marginTop="60dp"
             android:background="#f47d1f"
             android:fontFamily="sans-serif-smallcaps"

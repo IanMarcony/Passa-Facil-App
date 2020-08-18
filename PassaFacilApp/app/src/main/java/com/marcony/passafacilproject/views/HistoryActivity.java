@@ -3,6 +3,7 @@ package com.marcony.passafacilproject.views;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -14,7 +15,7 @@ import com.marcony.passafacilproject.models.Bus;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HistoryActivity extends AppCompatActivity {
+public class HistoryActivity extends Activity {
 
     ImageButton btn_back;
     RecyclerView list_bus_view;

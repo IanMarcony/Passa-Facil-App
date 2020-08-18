@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "804867056250",
+    "firebase_url": "https://passa-facil-f5df9.firebaseio.com",
+    "project_id": "passa-facil-f5df9",
+    "storage_bucket": "passa-facil-f5df9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:804867056250:android:0321696dd1c0d865fa11c3",
+        "android_client_info": {
+          "package_name": "com.marcony.passafacilproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "804867056250-457iule9lbo9va77r1nl8om8ci2m5rqb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.marcony.passafacilproject",
+            "certificate_hash": "87108ec0a93ee6bc2e5084fcedaa5bf83e2f8f0f"
+          }
+        },
+        {
+          "client_id": "804867056250-d9b27ivf5r64emijs6etkkbp08u9brgg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjI6_u-LsTnEIpCI7cZPr0qFkc0VxyKRM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "804867056250-d9b27ivf5r64emijs6etkkbp08u9brgg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

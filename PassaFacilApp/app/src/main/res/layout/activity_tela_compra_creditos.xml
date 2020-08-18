@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         tools:ignore="MissingConstraints">
 
@@ -33,6 +33,7 @@
                 android:id="@+id/buy_edit_value"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
+                android:inputType="numberDecimal"
                 android:background="@drawable/style_edit_text"
                 android:fontFamily="sans-serif-smallcaps"
                 android:padding="10dp"
@@ -60,6 +61,7 @@
                 android:id="@+id/buy_edit_numcard"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
+                android:inputType="number"
                 android:background="@drawable/style_edit_text"
                 android:fontFamily="sans-serif-smallcaps"
                 android:padding="10dp"
@@ -76,7 +78,7 @@
                 android:layout_width="125dp"
                 android:layout_height="60dp"
                 android:gravity="center"
-                android:text="Nº Impresso no Cartão"
+                android:text="Nome Impresso no Cartão"
                 android:layout_marginLeft="20dp"
                 android:textSize="17dp"
                 android:fontFamily="sans-serif-smallcaps"
@@ -90,6 +92,7 @@
                 android:background="@drawable/style_edit_text"
                 android:fontFamily="sans-serif-smallcaps"
                 android:padding="10dp"
+                android:imeOptions="actionNext"
                 android:textSize="15dp" />
 
         </LinearLayout>
@@ -113,6 +116,7 @@
                 android:id="@+id/buy_edit_cvv"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
+                android:inputType="number"
                 android:background="@drawable/style_edit_text"
                 android:fontFamily="sans-serif-smallcaps"
                 android:padding="10dp"
@@ -152,9 +156,11 @@
                     android:id="@+id/buy_edit_val_mes"
                     android:layout_width="60dp"
                     android:layout_height="40dp"
+                    android:inputType="number"
                     android:background="@drawable/style_edit_text"
                     android:fontFamily="sans-serif-smallcaps"
                     android:padding="10dp"
+                    android:imeOptions="actionNext"
                     android:textSize="15dp" />
 
             </LinearLayout>
@@ -179,6 +185,7 @@
                     android:background="@drawable/style_edit_text"
                     android:fontFamily="sans-serif-smallcaps"
                     android:padding="10dp"
+                    android:inputType="number"
                     android:textSize="15dp"
                     android:layout_marginLeft="10dp"/>
 
@@ -193,7 +200,21 @@
             android:text="Efetuar Transação"
             android:layout_marginTop="60dp"
             android:gravity="center"
+            android:padding="5dp"
             android:layout_marginLeft="150dp"
+            android:textColor="#323131"
+            android:background="#f47d1f"
+            android:fontFamily="sans-serif-smallcaps"/>
+        <Button
+            android:id="@+id/buy_btn_maps"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="Estabelecimentos"
+            android:layout_marginTop="60dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_marginLeft="143dp"
+            android:drawableRight="@drawable/ic_map"
             android:textColor="#323131"
             android:background="#f47d1f"
             android:fontFamily="sans-serif-smallcaps"/>

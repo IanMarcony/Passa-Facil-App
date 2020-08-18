@@ -8,9 +8,11 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_height="match_parent"
         android:background="#FFFFFF"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline15"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
         <ImageView
@@ -18,78 +20,88 @@
             android:layout_height="200dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="100dp"
-            android:src="@mipmap/ic_logoExtra_foreground" />
+            android:src="@drawable/logo_passa_facil"/>
 
-       <LinearLayout
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:orientation="vertical"
-           android:layout_gravity="center_horizontal"
-           >
-           <LinearLayout
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:orientation="horizontal"
-               android:layout_gravity="center_horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
 
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:fontFamily="sans-serif-smallcaps"
-                   android:gravity="center"
-                   android:text="Email"
-                   android:layout_marginRight="20dp"
-                   android:textColor="#000"
-                   android:textSize="17dp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
 
-               <EditText
-                   android:id="@+id/main_edit_txt_email"
-                   android:layout_width="150dp"
-                   android:layout_height="30dp"
-                   android:background="#4c86b5"
-                   android:fontFamily="sans-serif-smallcaps"
-                   android:inputType="textEmailAddress"
-                   android:textColor="#FFFF"
-                   android:textSize="13dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center"
+                    android:text="Email"
+                    android:textColor="#000"
+                    android:textSize="17dp" />
 
-           </LinearLayout>
-           <LinearLayout
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:orientation="horizontal"
-               android:layout_marginTop="20dp"
-               android:layout_gravity="center_horizontal">
+                <EditText
+                    android:id="@+id/main_edit_txt_email"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
 
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:fontFamily="sans-serif-smallcaps"
-                   android:gravity="center"
-                   android:layout_marginRight="10dp"
-                   android:text="Senha"
-                   android:textColor="#000"
-                   android:textSize="17dp" />
+                    android:background="#4c86b5"
+                    android:fontFamily="sans-serif"
+                    android:hint="Digite seu email"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10dp"
+                    android:textColor="#FFFF" />
 
-               <EditText
-                   android:id="@+id/main_edit_txt_password"
-                   android:layout_width="150dp"
-                   android:layout_height="30dp"
-                   android:background="#4c86b5"
-                   android:fontFamily="sans-serif-smallcaps"
-                   android:inputType="textPassword"
-                   android:textColor="#FFFF"
-                   android:textSize="13dp" />
+            </LinearLayout>
 
-           </LinearLayout>
-       </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center"
+                    android:text="Senha"
+
+                    android:textColor="#000"
+                    android:textSize="17dp" />
+
+                <EditText
+                    android:id="@+id/main_edit_txt_password"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+
+                    android:paddingLeft="10dp"
+                    android:hint="Digite sua senha"
+                    android:background="#4c86b5"
+                    android:fontFamily="sans-serif"
+                    android:inputType="textPassword"
+                    android:imeOptions="actionGo"
+                    android:textColor="#FFFF"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
 
 
         <Button
             android:id="@+id/main_btn_enter"
-            android:layout_width="wrap_content"
-            android:layout_height="25dp"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
+
             android:background="#FFFFFF"
             android:fontFamily="sans-serif-smallcaps"
             android:text="Entrar"
@@ -97,8 +109,8 @@
 
         <Button
             android:id="@+id/main_btn_register"
-            android:layout_width="110dp"
-            android:layout_height="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="40dp"
             android:background="#f47d1f"

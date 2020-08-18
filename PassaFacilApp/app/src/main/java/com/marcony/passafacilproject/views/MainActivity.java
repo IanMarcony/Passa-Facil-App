@@ -2,17 +2,21 @@ package com.marcony.passafacilproject.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.marcony.passafacilproject.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     EditText  emailUser,passwordUser;
     Button btnEnter,btnRegister;
@@ -44,6 +48,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        passwordUser.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if(actionId == EditorInfo.IME_ACTION_GO){
+                        login();
+                        return true;
+                }
+                return false;
+            }
+        });
 
     }
 
@@ -54,8 +68,8 @@ public class MainActivity extends AppCompatActivity {
 
         if(email.equals("admin")&&password.equals("admin")){
             progressBar.setVisibility(View.GONE);
-            //startActivity(new Intent());
-            //finish();
+           startActivity(new Intent(this,TelaPrincipal.class));
+            finish();
         }else{
             Toast.makeText(getApplicationContext(),"Seu email/senha  estão incorretos",Toast.LENGTH_SHORT).show();
             progressBar.setVisibility(View.GONE);
