@@ -75,6 +75,7 @@ public class MainActivity extends Activity {
 
         if(!email.trim().isEmpty()&&!password.trim().isEmpty())
         {
+            firebaseAuth= FirebaseAuth.getInstance();
             firebaseAuth.signInWithEmailAndPassword(email,password)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override

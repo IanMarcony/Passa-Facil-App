@@ -60,8 +60,9 @@ public class TelaCadastro extends Activity {
     }
     public void signup(){
         progressBar.setVisibility(View.VISIBLE);
-
-        auth.createUserWithEmailAndPassword(email.getText().toString().trim(), password.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        auth=FirebaseAuth.getInstance();
+        auth.createUserWithEmailAndPassword(email.getText().toString().trim(), password.getText().toString())
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
@@ -83,6 +84,7 @@ public class TelaCadastro extends Activity {
                     DatabaseReference  databaseReference = FirebaseDatabase.getInstance().getReference().child("users");
 
                     databaseReference.setValue(user);
+                    finish();
                 }else{
                     Toast.makeText(getApplicationContext(),"Não foi possível criar sua conta",Toast.LENGTH_SHORT).show();
                 }
