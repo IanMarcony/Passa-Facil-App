@@ -51,7 +51,9 @@ public class TelaCadastro extends Activity {
     }
     public void signup(){
         progressBar.setVisibility(View.VISIBLE);
-        //Validar Campos
+
+
+
 
 
         Toast.makeText(getApplicationContext(),"Registrado",Toast.LENGTH_SHORT).show();

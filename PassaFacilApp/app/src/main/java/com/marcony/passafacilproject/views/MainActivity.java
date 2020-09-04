@@ -1,5 +1,6 @@
 package com.marcony.passafacilproject.views;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
@@ -14,13 +15,19 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.marcony.passafacilproject.R;
 
 public class MainActivity extends Activity {
 
-    EditText  emailUser,passwordUser;
-    Button btnEnter,btnRegister;
-    ProgressBar progressBar;
+    private EditText  emailUser,passwordUser;
+    private Button btnEnter,btnRegister;
+    private ProgressBar progressBar;
+
+    private FirebaseAuth firebaseAuth;
 
 
     @Override
@@ -66,14 +73,25 @@ public class MainActivity extends Activity {
         String email = emailUser.getText().toString();
         String password = passwordUser.getText().toString();
 
-        if(email.equals("admin")&&password.equals("admin")){
-            progressBar.setVisibility(View.GONE);
-           startActivity(new Intent(this,TelaPrincipal.class));
-            finish();
-        }else{
-            Toast.makeText(getApplicationContext(),"Seu email/senha  estão incorretos",Toast.LENGTH_SHORT).show();
-            progressBar.setVisibility(View.GONE);
+        if(!email.trim().isEmpty()&&!password.trim().isEmpty())
+        {
+            firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    progressBar.setVisibility(View.GONE);
+                    if(task.isSuccessful()){
+                        startActivity(new Intent(getApplicationContext(),TelaPrincipal.class));
+                        finish();
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Email e/ou senha incorretos!",Toast.LENGTH_SHORT).show();
+                        emailUser.setText("");
+                        passwordUser.setText("");
+                    }
+                }
+            });
         }
+
+
 
 
     }

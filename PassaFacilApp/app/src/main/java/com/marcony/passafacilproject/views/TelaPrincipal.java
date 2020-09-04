@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.marcony.passafacilproject.R;
 
 public class TelaPrincipal extends Activity {
@@ -33,8 +34,11 @@ public class TelaPrincipal extends Activity {
                 break;
             case R.id.btn_map_main:startActivity(new Intent(this,MapActivity.class));
                 break;
-            case R.id.btnLogout: startActivity(new Intent(this, MainActivity.class));
-            finish();
+            case R.id.btnLogout:
+                FirebaseAuth firebaseAuth=FirebaseAuth.getInstance();
+                firebaseAuth.signOut();
+                startActivity(new Intent(this, MainActivity.class));
+                finish();
             break;
         }
     }
