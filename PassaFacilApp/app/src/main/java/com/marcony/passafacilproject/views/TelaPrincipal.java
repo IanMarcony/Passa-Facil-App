@@ -14,11 +14,13 @@ import com.marcony.passafacilproject.R;
 
 public class TelaPrincipal extends Activity {
     private TextView txt_saldo, txt_n_viagens;
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_principal);
+        firebaseAuth=FirebaseAuth.getInstance();
 
         txt_saldo = findViewById(R.id.textSaldo);
         txt_n_viagens = findViewById(R.id.textNViagens);
@@ -35,7 +37,7 @@ public class TelaPrincipal extends Activity {
             case R.id.btn_map_main:startActivity(new Intent(this,MapActivity.class));
                 break;
             case R.id.btnLogout:
-                FirebaseAuth firebaseAuth=FirebaseAuth.getInstance();
+
                 firebaseAuth.signOut();
                 startActivity(new Intent(this, MainActivity.class));
                 finish();

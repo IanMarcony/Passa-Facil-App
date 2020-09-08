@@ -19,6 +19,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 import com.marcony.passafacilproject.R;
 
 public class MainActivity extends Activity {
@@ -39,6 +40,9 @@ public class MainActivity extends Activity {
         btnEnter=findViewById(R.id.main_btn_enter);
         btnRegister=findViewById(R.id.main_btn_register);
         progressBar = findViewById(R.id.main_progress);
+        firebaseAuth= FirebaseAuth.getInstance();
+
+
 
         btnEnter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,7 +79,7 @@ public class MainActivity extends Activity {
 
         if(!email.trim().isEmpty()&&!password.trim().isEmpty())
         {
-            firebaseAuth= FirebaseAuth.getInstance();
+
             firebaseAuth.signInWithEmailAndPassword(email,password)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override

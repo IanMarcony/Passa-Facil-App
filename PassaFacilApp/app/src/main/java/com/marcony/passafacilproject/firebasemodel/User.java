@@ -4,7 +4,7 @@ public class User {
     private String uid;
     private String nome;
     private String email;
-    private String datnasci;
+    private String datnasc;
     private String sexo;
     private String cpf;
     private String rg;
@@ -15,7 +15,7 @@ public class User {
         this.uid = uid;
         this.nome = nome;
         this.email = email;
-        this.datnasci = datnasci;
+        this.datnasc = datnasci;
         this.sexo = sexo;
         this.cpf = cpf;
         this.rg = rg;
@@ -48,11 +48,11 @@ public class User {
     }
 
     public String getDatnasci() {
-        return datnasci;
+        return datnasc;
     }
 
     public void setDatnasci(String datnasci) {
-        this.datnasci = datnasci;
+        this.datnasc = datnasci;
     }
 
     public String getSexo() {
