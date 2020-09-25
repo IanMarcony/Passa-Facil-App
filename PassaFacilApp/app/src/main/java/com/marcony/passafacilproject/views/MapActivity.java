@@ -15,7 +15,9 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.marcony.passafacilproject.R;
 
@@ -38,6 +40,9 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
     @Override
     public void onMapReady(GoogleMap googleMap) {
         LatLng anyPlace = new LatLng(-3.123, -4.5324);
+        googleMap.setMapStyle(
+                MapStyleOptions.loadRawResourceStyle(
+                        this, R.raw.style_map));
         googleMap.addMarker(new MarkerOptions().position(anyPlace).title("Any Place"));
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(anyPlace));
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {

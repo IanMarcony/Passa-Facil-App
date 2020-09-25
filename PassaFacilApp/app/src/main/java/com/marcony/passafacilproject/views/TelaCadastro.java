@@ -33,6 +33,8 @@ public class TelaCadastro extends Activity {
         setContentView(R.layout.activity_tela_cadastro);
         buildViews();
 
+
+        
         btn_concludes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,12 +68,6 @@ public class TelaCadastro extends Activity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-
-
-
-
-
-
                     User user = new User(FirebaseAuth.getInstance().getUid(),
                             name.getText().toString(),
                             email.getText().toString(),
@@ -82,8 +78,7 @@ public class TelaCadastro extends Activity {
                             adress.getText().toString(),
                             Integer.parseInt(numPass.getText().toString()));
                     DatabaseReference  databaseReference = FirebaseDatabase.getInstance().getReference().child("users");
-
-                    databaseReference.setValue(user);
+                    databaseReference.child(user.getUid()).setValue(user);
                     finish();
                 }else{
                     Toast.makeText(getApplicationContext(),"Não foi possível criar sua conta",Toast.LENGTH_SHORT).show();
