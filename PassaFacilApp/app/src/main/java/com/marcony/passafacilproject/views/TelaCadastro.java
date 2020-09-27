@@ -41,7 +41,7 @@ public class TelaCadastro extends Activity {
         setContentView(R.layout.activity_tela_cadastro);
         auth=FirebaseAuth.getInstance();
         buildViews();
-
+        
         btn_concludes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,8 +77,12 @@ public class TelaCadastro extends Activity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+
                     Log.d("AQUI","criou o user");
                     final User user = new User(FirebaseAuth.getInstance().getCurrentUser().getUid(),
+
+                    User user = new User(FirebaseAuth.getInstance().getUid(),
+
                             name.getText().toString(),
                             email.getText().toString(),
                             birthDate.getText().toString(),
@@ -87,6 +91,7 @@ public class TelaCadastro extends Activity {
                             rg.getText().toString(),
                             adress.getText().toString(),
                             Integer.parseInt(numPass.getText().toString()));
+
 
                     Log.d("AQUI","UID: "+user.getUid());
                    final DatabaseReference  databaseReference = FirebaseDatabase.getInstance().getReference();
@@ -98,6 +103,15 @@ public class TelaCadastro extends Activity {
                                     progressBar.setVisibility(View.GONE);
                                     if(task.isSuccessful()){
                                       PassaFacil passaFacil = new PassaFacil(user.getCod_passa_facil(),0);
+
+                    DatabaseReference  databaseReference = FirebaseDatabase.getInstance().getReference().child("users");
+                    databaseReference.child(user.getUid()).setValue(user);
+                    finish();
+                }else{
+                    Toast.makeText(getApplicationContext(),"Não foi possível criar sua conta",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
                                         databaseReference.child("users").child(user.getUid())
                                                 .child(Integer.toString(user.getCod_passa_facil()))
