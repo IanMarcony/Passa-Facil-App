@@ -8,18 +8,18 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:804867056250:android:2af299e38cf182c2fa11c3",
+        "mobilesdk_app_id": "1:804867056250:android:6cdcb2872e290722fa11c3",
         "android_client_info": {
           "package_name": "com.marcony.passafacilproject"
         }
       },
       "oauth_client": [
         {
-          "client_id": "804867056250-d4cbhmtr45au060g6h73otdfmjpvpsp1.apps.googleusercontent.com",
+          "client_id": "804867056250-8ihle49km5bqog1u798mabu2ot8i78bq.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.marcony.passafacilproject",
-            "certificate_hash": "077a8cfdae7f44deb6be37c3499453b2e4e14707"
+            "certificate_hash": "87108ec0a93ee6bc2e5084fcedaa5bf83e2f8f0f"
           }
         },
         {
@@ -29,7 +29,7 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDml35F3vstRbZcWTLJU9enogd52UH2qcU"
+          "current_key": "AIzaSyCUvWKO-yi8IuTPXppJqD8sWUJiyfHWFw0"
         }
       ],
       "services": {
