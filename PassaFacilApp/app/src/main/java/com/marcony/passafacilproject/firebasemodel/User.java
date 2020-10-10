@@ -9,9 +9,9 @@ public class User {
     private String cpf;
     private String rg;
     private  String endereco;
-    private int cod_passa_facil;
+    private PassaFacil cod_passa_facil;
 
-    public User(String uid, String nome, String email, String datnasci, String sexo, String cpf, String rg, String endereco, int cod_passa_facil) {
+    public User(String uid, String nome, String email, String datnasci, String sexo, String cpf, String rg, String endereco) {
         this.uid = uid;
         this.nome = nome;
         this.email = email;
@@ -20,7 +20,7 @@ public class User {
         this.cpf = cpf;
         this.rg = rg;
         this.endereco = endereco;
-        this.cod_passa_facil = cod_passa_facil;
+
     }
 
     public String getUid() {
@@ -87,11 +87,20 @@ public class User {
         this.endereco = endereco;
     }
 
-    public int getCod_passa_facil() {
+
+    public String getDatnasc() {
+        return datnasc;
+    }
+
+    public void setDatnasc(String datnasc) {
+        this.datnasc = datnasc;
+    }
+
+    public PassaFacil getCod_passa_facil() {
         return cod_passa_facil;
     }
 
-    public void setCod_passa_facil(int cod_passa_facil) {
+    public void setCod_passa_facil(PassaFacil cod_passa_facil) {
         this.cod_passa_facil = cod_passa_facil;
     }
 }

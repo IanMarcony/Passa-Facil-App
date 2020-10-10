@@ -44,6 +44,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
                 MapStyleOptions.loadRawResourceStyle(
                         this, R.raw.style_map));
         googleMap.addMarker(new MarkerOptions().position(anyPlace).title("Any Place"));
+
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(anyPlace));
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling

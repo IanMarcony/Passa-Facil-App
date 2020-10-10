@@ -78,7 +78,7 @@ public class TelaCadastro extends Activity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
 
-                   final User user = new User(FirebaseAuth.getInstance().getUid(),
+                    User user = new User(FirebaseAuth.getInstance().getUid(),
 
                             name.getText().toString(),
                             email.getText().toString(),
@@ -86,31 +86,23 @@ public class TelaCadastro extends Activity {
                             sexo.getText().toString(),
                             cpf.getText().toString(),
                             rg.getText().toString(),
-                            adress.getText().toString(),
-                            Integer.parseInt(numPass.getText().toString()));
+                            adress.getText().toString()
+                            );
 
 
                     Log.d("AQUI","UID: "+user.getUid());
-                   final DatabaseReference  userDatabase = FirebaseDatabase.getInstance().getReference().child("users").child(user.getUid());
+                    DatabaseReference  userDatabase = FirebaseDatabase.getInstance().getReference().child("users").child(user.getUid());
                     Log.d("AQUI","DatabaseReference: "+userDatabase);
-                    userDatabase.setValue(user)
-                            .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    progressBar.setVisibility(View.GONE);
-                                    if (task.isSuccessful()) {
-                                        PassaFacil passaFacil = new PassaFacil(user.getCod_passa_facil(), 0);
+                    userDatabase.setValue(user);
+                    PassaFacil passaFacil = new PassaFacil(numPass.getText().toString(), 0);
 
-                                        userDatabase.setValue(passaFacil);
+                    userDatabase.child("passa_facil").setValue(passaFacil);
 
 
-                                        Toast.makeText(getApplicationContext(),"Conta criada com Sucesso",Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(getApplicationContext(), TelaPrincipal.class));
-                                    } else {
-                                        Toast.makeText(getApplicationContext(), "Não foi possível criar sua conta", Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-                            });
+                    Toast.makeText(getApplicationContext(),"Conta criada com Sucesso",Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(getApplicationContext(), TelaPrincipal.class));
+
+
 
                     }else{
                     progressBar.setVisibility(View.GONE);

@@ -20,6 +20,7 @@ public class MyRecycleViewAdapter extends RecyclerView.Adapter<MyRecycleViewAdap
     public List<Bus> busList;
 
     public MyRecycleViewAdapter(List<Bus> busList){
+
         this.busList = busList;
     }
 

@@ -1,11 +1,13 @@
 package com.marcony.passafacilproject.models;
 
 public class Bus {
-    private String line;
-    private String hour;
     private String date;
+    private String hour;
+    private String line;
 
-    public Bus(String line, String hour, String date) {
+
+
+    public Bus(String date, String hour,String line ) {
         this.line = line;
         this.hour = hour;
         this.date = date;
