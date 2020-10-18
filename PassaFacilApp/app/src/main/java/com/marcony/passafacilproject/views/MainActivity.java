@@ -19,6 +19,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 import com.marcony.passafacilproject.R;
 
@@ -29,6 +30,7 @@ public class MainActivity extends Activity {
     private ProgressBar progressBar;
 
     private FirebaseAuth firebaseAuth;
+    private FirebaseUser firebaseUser;
 
 
     @Override
@@ -41,6 +43,7 @@ public class MainActivity extends Activity {
         btnRegister=findViewById(R.id.main_btn_register);
         progressBar = findViewById(R.id.main_progress);
         firebaseAuth= FirebaseAuth.getInstance();
+        firebaseUser=firebaseAuth.getCurrentUser();
 
 
 
@@ -100,5 +103,15 @@ public class MainActivity extends Activity {
 
 
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        if(firebaseUser!=null){
+            startActivity(new Intent(getApplicationContext(),TelaPrincipal.class));
+            finish();
+        }
     }
 }

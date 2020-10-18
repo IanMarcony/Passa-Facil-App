@@ -1,5 +1,6 @@
 package com.marcony.passafacilproject.views;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
@@ -18,12 +19,23 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.marcony.passafacilproject.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MapActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private Button btn_back;
+    private GoogleMap mMap;
+    private List<Marker> listMarketplaces;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,17 +47,49 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
 
 
     }
+    public void getAllMarketplace(){
+        DatabaseReference marketplaceDatabase= FirebaseDatabase.getInstance().getReference().child("estabelecimentos");
+
+        marketplaceDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    LatLng newPosition=null;
+                    for(DataSnapshot d : snapshot.getChildren()){
+                        String nome  = d.child("Nome").getValue().toString();
+                        double lat =(double) d.child("lat").getValue();
+                        double longitude =(double) d.child("long").getValue();
+                        newPosition = new LatLng(lat,longitude);
+
+                        mMap.addMarker(new MarkerOptions()
+                                .title(nome)
+                                .position(newPosition)
+                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.delivery)));
+
+                    }
+                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(newPosition,12));
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+    }
 
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        LatLng anyPlace = new LatLng(-3.123, -4.5324);
-        googleMap.setMapStyle(
+        mMap = googleMap;
+
+        mMap.setMapStyle(
                 MapStyleOptions.loadRawResourceStyle(
                         this, R.raw.style_map));
-        googleMap.addMarker(new MarkerOptions().position(anyPlace).title("Any Place"));
 
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(anyPlace));
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
@@ -57,7 +101,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
 
             return;
         }
-        googleMap.setMyLocationEnabled(true);
-
+        mMap.setMyLocationEnabled(true);
+        getAllMarketplace();
     }
 }

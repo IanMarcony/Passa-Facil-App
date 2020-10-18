@@ -79,8 +79,12 @@ public class HistoryActivity extends Activity {
                         busList.add(bus);
 
                     }
+                    List<Bus> listAux = new ArrayList<Bus>();
+                    for(int i = busList.size()-1;i>=0;i--){
+                        listAux.add(busList.get(i));
+                    }
 
-                    list_bus_view.setAdapter( new MyRecycleViewAdapter(busList));
+                    list_bus_view.setAdapter( new MyRecycleViewAdapter(listAux));
                 }
             }
 
