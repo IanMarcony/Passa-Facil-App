@@ -1,6 +1,6 @@
 <h1>Projeto Meu Passa Fácil</h1>
 
-<h1>Autores</h1>
+<h1>Integrantes da Equipe</h1>
 <ul>
   <li>Débora Maciel da Silva - Analista</il>
   <li>Ian Marconi Lopes Salazar - Programador</il>
@@ -11,6 +11,10 @@
 </ul>
 
 <h1> O que é?</h1>
+
+<h1>Como baixar?</h1>
+
+<h1>Qual o público alvo?</h1>
     
 <h1> Qual o Objetivo?</h1>
 
