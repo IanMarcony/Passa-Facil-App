@@ -8,7 +8,6 @@
    * [Integrantes](#bus-integrantes)
    * [Funcionalidades](#bus-funcionalidades)
    * [Instalação](#bus-instalação)
-   * [Contribuir](#bus-contribuir)
    * [Gerar Versão](#bus-gerar-versão)
    
 <!--te-->
@@ -23,7 +22,9 @@ Atualmente um dos problemas que existe em relação aos meios de transportes pú
 
 ## :bus: **Como Baixar**
 
+Você pode baixar o aplicativo Meu Passa fácil clicando no link abaixo 👇
 
+[Baixar Passa-Fácil](https://github.com/IanMarcony/Passa-Facil-App/releases/download/build2.0/build2.apk)
 
 ## :bus: **Público Alvo**
 
@@ -62,15 +63,12 @@ O público alvo do projeto de software é composto em sua maioria por estudantes
 
 Para você instalar o aplicativo , basta navegar no arquivo onde se encontra apk baixado e prossiga no processo de instalação.
 
-
-## :bus: **Contribuir**
-
-
-
-
 ## :bus: **Gerar Versão**
 
-
-
+Para você gerar uma versão, basta seguir os seguintes passos:
+* Abrar o GitHub é acesse o seguinte link [Passa-Fácil](https://github.com/IanMarcony/Passa-Facil-App.git)
+* Logo em seguida, clone o repositório. Se tiver alguma dúvida de como clonar, acesse esse link [Clonar Repositório](https://docs.github.com/pt/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+* Abra o Android Studio e acesse as seguintes abas: Build > Generate Build > Build Apk;
+* Seguindo esses passos sua Versão será gerada.
 
 
