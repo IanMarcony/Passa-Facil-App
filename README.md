@@ -14,8 +14,7 @@
 
 <h1>Como baixar?</h1>
 
-<p>Para que você possa baixar o aplicativo Meu Passa Fácil, basta você clicar no link abaixo:
-<h>
+<p>Você pode baixar o aplicativo Meu Passa Fácil clicando  no link abaixo:
 
 https://github.com/IanMarcony/Passa-Facil-App/releases/download/build2.0/build2.apk
 <p/>
