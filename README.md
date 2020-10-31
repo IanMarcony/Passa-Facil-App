@@ -7,7 +7,7 @@
   <li>Tiago Brasil de Lima - Analista</il>
   <li>Paulo Ricardo Garcia - Desing</il>
   <li>Evilázio Alves da Silva Júnior - Programador</il>
-  <li>José Elias de Souza Prado - Programador</il>
+  <li>José Elias de Souza Prado - Analista</il>
 </ul>
 
 <h1> O que é?</h1>
