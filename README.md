@@ -11,6 +11,7 @@
 </ul>
 
 <h1> O que é?</h1>
+o projeto passa fácil auxilia os usuários na recarga de créditos,facilitando esse meio de recarga através de boletos ou pagamentos no cartão aonde quer que o usuário esteja localizado e a qualquer hora.
 
 <h1>Como baixar?</h1>
 
